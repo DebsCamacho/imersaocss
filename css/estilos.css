@@ -1,13 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     background: pink;
-   background-image: url('https://wallpapercave.com/wp/wp6076288.jpg');
    background-size: auto 100vh;
    font-family: Arial;
    height: 100vh;
+   font-size: 12xp;
+   
+ }
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+ @media (min-width: 400px) {
+body {
+  font-size: 14px;
+}
+ }
+
+ @media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+   }
+
+ header{
+  background-image: url('https://wallpapercave.com/wp/wp6076288.jpg');
+  filter:opacity(alpha=60);
+        
+        opacity:1;
+  background-size: auto 100vh;
+  height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
  
  .menu{
-   background-color: yellow;
+   background-color: whitesmoke;
+   position: fixed;
+   width: 100vw;
+   top: 0;
+
  }
  
  .menu ul{
@@ -18,7 +53,11 @@ body {
  .menu li{
    list-style: none;
  }
- 
+ .menu a {
+   display: block;
+   padding: 10px 20px;
+  
+ }
  a{
    color: teal;
    text-decoration: none;
@@ -32,8 +71,19 @@ body {
  .site-title{
    color: whitesmoke;
    text-align: center;
+   
+ }
+
+ .site-title{
+   font-size: 4em;
  }
  
  .site-subtitle {
    font-style: italic;
+ }
+
+ .img-portfolio{
+  height: 180px;
+   widht: 180px;
+   
  }
