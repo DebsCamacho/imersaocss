@@ -50,7 +50,7 @@ body {
    position: fixed;
    width: 100vw;
    top: 0;
-
+   z-index: 1;
  }
  
  .menu ul{
@@ -64,10 +64,17 @@ body {
  .menu a {
    display: block;
    padding: 10px 20px;
-  
+   transition: background-color 1s, color 1s;
  }
+
+.menu a:active,
+ .menu a:hover{
+   background-color: rgb(192, 3, 113);
+   color: whitesmoke;
+ }
+
  a{
-   color: teal;
+   color: rgb(192, 3, 113);
    text-decoration: none;
  }
  
@@ -75,10 +82,25 @@ body {
    text-decoration: underline;
  }
  
+.titulo{
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: linear 2s animacaotitulo forwards;
+}
+
+@keyframes animacaotitulo {
+  100%{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+
+  }
+}
+
  .site-subtitle,
  .site-title{
-   color: whitesmoke;
+   color: rgb(192, 3, 113);
    text-align: center;
+   text-shadow: 1px 1px  whitesmoke;
    
  }
 
@@ -93,11 +115,13 @@ body {
    line-height: 1.8em;
  }
 
+.contato,
 .portfolio{
 padding: 2em;
-height: 100vh;
+min-height: 100vh;
 }
 
+.contato,
  .portfolio h2 {
   font-family: 'Baloo 2', cursive;
   color: whitesmoke;
@@ -137,8 +161,25 @@ gap: 2em;
    object-fit: cover;
    object-position: left bottom;
    border-radius: 3%;
-   
+   transition: transform 500ms;
  }
 
- 
- 
+ .img-portfolio:hover {
+  transform: scale(1.2) rotate(-1deg);
+ }
+
+ .contato.icons{
+text-align: center;
+ }
+
+ .contato a{
+   color: whitesmoke;
+   font-size: 2em;
+   transition: text-shadow 1s;
+ }
+
+ .contato a:active,
+ .contato a:hover{
+   text-decoration: none;
+   text-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+ }
